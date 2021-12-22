@@ -31,7 +31,7 @@ function renderCurrentDate() {
 
 }
 
-function renderCurrentMonth() {
+function renderCurrentMonth() {
     const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
     const d = new Date();
     

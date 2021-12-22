@@ -24,7 +24,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 2rem;
+    line-height: 1.4rem;
+    font-size: large;
 }
 .todo-top {
     padding: 1rem 0;
@@ -32,23 +33,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.todo-list, .event-list {
-    width: 90%;
-    padding-bottom: 1rem;
-}
-
-.todo-list-title, .event-list-title {
-    border: 2px red solid;
-    text-align: center;
-    width: 100%;
-}
-
-.add-event {
-    color: red;
-    padding-top: 3rem;
-    font-size: xx-large;
+    line-height: 2rem;
 }
 
 .right-side {
@@ -77,25 +62,38 @@ body {
     padding: .5rem 0;
     width: 100%;
 }
-.day-grid {
+
+#day-grid {
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(7, 1fr);
     gap: 2px;
+    font-size: x-large;
     
 }
 
-.day-grid div {
+.today {
+    position: relative;
+    background-color: #89CFF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#day {
     background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.day-grid div:hover {
+#day:hover {
     background-color: lightsteelblue;
-    cursor: pointer;
 }
 
-#prev-month, #next-month, .add-event {
+#day:hover, .today:hover {
     cursor: pointer;
 }
