@@ -1,8 +1,22 @@
 window.addEventListener('load', main);
 
 function main() {
+    renderOldDays();
     renderGrid();
 }
+
+function renderOldDays() {
+    let d = new Date();
+    let m = d.getMonth();
+    let y = d.getFullYear();    
+    let fd = new Date(y, m, 1).getDay();
+    for (i = 1; i < fd; i++) {
+        let oldday = document.createElement('div');
+        //oldday.id = 'oldday';
+        document.getElementById('day-grid').appendChild(oldday);
+    }
+}
+
 function renderGrid() {
     let d = new Date();
     let prevm = d.getMonth();
